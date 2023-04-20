@@ -1,7 +1,3 @@
-/*
- * File: 4-puts.c
- * Auth: Chetachi
- */
 #include <stdio.h>
 /**
 * main - prints \"Programming is like building a multilingual
