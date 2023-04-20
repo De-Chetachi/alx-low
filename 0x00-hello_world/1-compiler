@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o main.o
+find $CFILE | cut -d '.' -f1 | export CFILEB= |gcc -c $CFILE -o $CFILEB.o
