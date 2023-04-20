@@ -1,2 +1,2 @@
 #!/bin/bash
-find $CFILE | cut -d '.' -f1 | export CFILEB= |gcc -c $CFILE -o $CFILEB.o
+gcc -c $CFILE -o $CFILE | tr '.c' '.o'
