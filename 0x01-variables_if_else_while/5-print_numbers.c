@@ -10,9 +10,9 @@ int	main(void)
 
 	for	(digi	=	0;	digi	<	10;	digi++)
 	{
-		putchar(digi);
+		printf("%d", digi);
 	}
 
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
