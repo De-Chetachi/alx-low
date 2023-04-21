@@ -7,10 +7,10 @@
 int	main(void)
 {
 	char	cheta;
-	
-	for(cheta	=	'a';	cheta	<=	'z';	cheta++)
+
+	for	(cheta	=	'a';	cheta	<=	'z';	cheta++)
 	{
-		if((cheta	!=	'q')	&&	(cheta	!=	'e'))
+		if	((cheta	!=	'q')	&&	(cheta	!=	'e'))
 			putchar(cheta);
 	}
 
