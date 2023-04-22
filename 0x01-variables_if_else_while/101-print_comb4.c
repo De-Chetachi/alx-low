@@ -16,13 +16,17 @@ int	main(void)
 		{
 			for	(c	=	50;	c	<	58;	c++)
 			{
-				if	(c	!=	57	&&	a	>	b	>	c)
+				if	(a	>	b	&&	b	>	c)
 				{
 					putchar(a);
 					putchar(b);
 					putchar(c);
-					putchar(',');
-					putchar(' ');
+
+					if	(a	!=	55	||	b	!=	56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
