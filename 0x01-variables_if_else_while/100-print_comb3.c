@@ -13,12 +13,11 @@ int	main(void)
 	{
 		for	(digi	=	49;	digi	<	58;	digi++)
 		{
-			if	(digi	!=	57	&&	digi	>	didi)
+			if	(digi	!=	didi	&&	digi	>	didi)
 			{
 				putchar(didi);
 				putchar(digi);
 				putchar(',');
-				putchar(' ');
 			}
 		}
 	}
