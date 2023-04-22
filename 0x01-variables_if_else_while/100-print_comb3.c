@@ -17,7 +17,12 @@ int	main(void)
 			{
 				putchar(didi);
 				putchar(digi);
-				putchar(',');
+
+				if	(didi	!=	56	&&	digi	!=	57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
