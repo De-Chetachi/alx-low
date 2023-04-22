@@ -8,11 +8,11 @@ int	main(void)
 {
 	char	cheta;
 
-	for	(cheta	=	'z';	cheta	<=	'a';	cheta--)
+	for	(cheta	=	'z';	cheta	>=	'a';	cheta--)
 	{
 		putchar(cheta);
 	}
-	
+
 	putchar('\n');
 	return (0);
 }

@@ -5,6 +5,8 @@
 */
 int	main(void)
 {
+	int	didi;
+
 	for	(digi	=	0;	digi	<=	9;	digi++)
 	{
 		putchar(digi);
