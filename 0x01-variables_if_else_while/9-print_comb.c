@@ -9,7 +9,8 @@ int	main(void)
 
 	for	(digi	=	48;	digi	<	58;	digi++)
 	{
-		if(digi	!=	57)
+		putchar(digi);
+		if	(digi	!=	57)
 		{
 			putchar(',');
 			putchar(' ');
