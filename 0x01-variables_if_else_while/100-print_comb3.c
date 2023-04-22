@@ -13,7 +13,7 @@ int	main(void)
 	{
 		for	(digi	=	49;	digi	<	58;	digi++)
 		{
-			if	(digi	!=	didi	&&	digi	>	didi)
+			if	(digi	!=	57	&&	digi	>	didi)
 			{
 				putchar(didi);
 				putchar(digi);
