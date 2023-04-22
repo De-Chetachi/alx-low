@@ -9,17 +9,23 @@ int	main(void)
 	int	a;
 	int	b;
 
-	for	(a	=	48;	a	<	58;	a++)
+	for	(a	=	0;	a	<	100;	a++)
 	{
-		for	(b	=	48;	b	<	58;	b++)
+		for	(b	=	0;	b	<	100;	b++)
 		{
-			putchar(a);
-			putchar(b);
-
-			if	(a	!=	57	||	b	!=	57)
+			if	(a	<	b)
 			{
-				putchar(',');
+				putchar((i	/	10)	+	48);
+				putchar((i	%	10)	+	48);
 				putchar(' ');
+				putchar((j	/	10)	+	48);
+				putchar((j	%	10)	+	48);
+
+				if	(i	!=	98	||	j	!=	99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
