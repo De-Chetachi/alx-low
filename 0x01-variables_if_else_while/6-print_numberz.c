@@ -5,7 +5,7 @@
 */
 int	main(void)
 {
-	int	didi;
+	int	digi;
 
 	for	(digi	=	0;	digi	<=	9;	digi++)
 	{
