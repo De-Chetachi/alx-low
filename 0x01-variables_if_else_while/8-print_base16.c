@@ -11,7 +11,7 @@ int	main(void)
 
 	for	(digi	=	48;	digi	<	58;	digi++)
 		putchar(digi);
-	for	(cheta	=	'a';	cheta	<	'f';	cheta++)
+	for	(cheta	=	'a';	cheta	<=	'f';	cheta++)
 		putchar(cheta);
 
 	putchar('\n');

@@ -7,7 +7,7 @@ int	main(void)
 {
 	int	digi;
 
-	for	(digi	=	48;	digi	<=	58;	digi++)
+	for	(digi	=	48;	digi	<	58;	digi++)
 	{
 		putchar(digi);
 	}
