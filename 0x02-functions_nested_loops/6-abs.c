@@ -17,20 +17,28 @@ int	_abs(int	p)
 	}
 	else
 	{
-		int	q;
-		int	temp;
-		int	sqrt;
-
-		q	=	p	*	p;
-		sqrt	=	q	/	2;
-		temp	=	0;
-
-		while	(sqrt	!=	temp)
+		if	(p	=	-1)
 		{
-			temp	=	sqrt;
-			sqrt	=	((q	/	temp)	+	temp)	/	2;
+			result	=	1;
 		}
-		result	=	sqrt;
+		else
+		{
+			int	q;
+			int	temp;
+			int	sqrt;
+
+			q	=	p	*	p;
+			sqrt	=	q	/	2;
+			temp	=	0;
+
+			while	(sqrt	!=	temp)
+			{
+				temp	=	sqrt;
+				sqrt	=	((q	/	temp)	+	temp)	/	2;
+
+				result	=	sqrt;
+			}
+		}
 	}
 	return	(result);
 }
