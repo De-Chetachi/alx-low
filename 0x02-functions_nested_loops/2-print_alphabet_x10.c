@@ -20,7 +20,7 @@ void print_alphabet_x10(void)
 			putchar(a);
 		}
 
-		i++
+		i++;
 	}
 	
 	putchar('\n');
