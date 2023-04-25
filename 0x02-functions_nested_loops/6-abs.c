@@ -12,8 +12,7 @@ int	_abs(int	p)
 	int	result;
 	if	(p	>=	0)
 	{
-		result	=	p
-		return	(result);
+		result	=	p;
 	}
 	else
 	{
@@ -31,6 +30,6 @@ int	_abs(int	p)
 			sqrt	=	(q/temp	+temp)	/	2;
 		}
 		result	=	sqrt;
-		return	(result);
 	}
+	return	result;
 }
