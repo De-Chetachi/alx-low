@@ -27,7 +27,7 @@ int	sayputchar()
 
 int	main(void)
 {
-	sayputchar();
+	sayputchar(void);
 
 	return	(0);
 }
