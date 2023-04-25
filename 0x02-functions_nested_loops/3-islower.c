@@ -3,6 +3,7 @@
 
 /**
 * _islower - priints the alphabets in small letters
+* @c: The integer to be considered
 * Return: If the argument is lower 1, if the argument is not lover 0
 */
 
