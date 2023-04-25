@@ -14,9 +14,9 @@ int	main(void)
 
 /**
 * sayputchar - prints -putchar to the standard output
-* Return: Void
+* Return: Always 0
 */
-void	sayputchar()
+int	sayputchar()
 {
 	putchar(95);
 	putchar(112);
@@ -27,4 +27,6 @@ void	sayputchar()
 	putchar(97);
 	putchar(114);
 	putchar('\n');
+
+	return	(0);
 }
