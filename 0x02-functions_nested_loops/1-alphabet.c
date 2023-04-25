@@ -1,5 +1,4 @@
 #include	<stdio.h>
-#include	<unistd.h>
 
 /**
 * print_alphabet - priints the alphabets in small letters
