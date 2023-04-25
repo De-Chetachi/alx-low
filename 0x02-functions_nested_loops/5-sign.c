@@ -18,14 +18,12 @@ int	print_sign(int	n)
 	{
 		if	(n	<	0)
 		{
-			return (write(-, -1));
+			return (-1);
 		}
 
 		else
 		{
-			putchar(48);
-
-			return  (write(0,0));
+			return  (0);
 		}
 	}
 }
