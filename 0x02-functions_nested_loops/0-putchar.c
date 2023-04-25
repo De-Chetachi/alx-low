@@ -1,16 +1,5 @@
 #include	<stdio.h>
 #include	<unistd.h>
-/**
-* main - entry point
-* Return: Always 0
-*/
-
-int	main(void)
-{
-	sayputchar();
-
-	return	(0);
-}
 
 /**
 * sayputchar - prints -putchar to the standard output
@@ -27,6 +16,18 @@ int	sayputchar()
 	putchar(97);
 	putchar(114);
 	putchar('\n');
+
+	return	(0);
+}
+
+/**
+* main - entry point
+* Return: Always 0
+*/
+
+int	main(void)
+{
+	sayputchar();
 
 	return	(0);
 }
