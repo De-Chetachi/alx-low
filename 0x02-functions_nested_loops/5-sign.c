@@ -10,6 +10,8 @@
 
 int	print_sign(int	n)
 {
+	int	result;
+
 	if	(n	>	0)
 	{
 		putchar(43);
