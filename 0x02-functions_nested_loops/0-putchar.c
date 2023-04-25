@@ -5,7 +5,7 @@
 * sayputchar - prints -putchar to the standard output
 * Return: Always 0
 */
-int	sayputchar()
+int	sayputchar(void)
 {
 	putchar(95);
 	putchar(112);
@@ -27,7 +27,7 @@ int	sayputchar()
 
 int	main(void)
 {
-	sayputchar(void);
+	sayputchar();
 
 	return	(0);
 }
