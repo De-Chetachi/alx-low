@@ -7,7 +7,7 @@
 * Return: If the argument is lower 1, if the argument is not lover 0
 */
 
-int	int _abs(int	p)
+int	_abs(int	p)
 {
 	if	(p	>=	0)
 	{
