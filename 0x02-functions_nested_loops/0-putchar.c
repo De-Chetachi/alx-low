@@ -1,10 +1,22 @@
 #include	<stdio.h>
+#include	<unistd.h>
 /**
 * main - entry point
 * Return: Always 0
 */
 
 int	main(void)
+{
+	sayputchar();
+
+	return	(0);
+}
+
+/**
+* sayputchar - prints -putchar to the standard output
+* Return: Void
+*/
+void	sayputchar()
 {
 	putchar(95);
 	putchar(112);
@@ -15,6 +27,4 @@ int	main(void)
 	putchar(97);
 	putchar(114);
 	putchar('\n');
-
-	return	(0);
 }
