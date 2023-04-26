@@ -11,15 +11,5 @@
 
 int	add(int	a, int	b)
 {
-	int	q;
-
-	q	=	(a	+	b);
-	if	(q	<	0)
-	{
-		_putchar(-q	+	48);
-	}
-	else
-	{
-		_putchar(q	+	48);
-	}
+	return	(a	+	b);
 }
