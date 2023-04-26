@@ -5,7 +5,7 @@
 /**
 * print_sign - priints the alphabets in small letters
 * @n: The integer to be considered
-* Return: 0 If the argument is zero, 1 if the argument s positive, 
+* Return: 0 If the argument is zero, 1 if the argument s positive,
 * -1 if the argument is negative
 */
 
