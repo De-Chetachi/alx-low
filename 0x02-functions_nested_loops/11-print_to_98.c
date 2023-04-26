@@ -10,18 +10,10 @@
 
 void	print_to_98(int n);
 {
-	int	q;
 
-	q	=	p	%	10;
-
-	if	(q	<	0)
+	for	(i	=	n;	i	<=	98;	i++)
 	{
-		_putchar(-q	+	48);
-		return	(-q);
+		printf("%d,	",	i);
 	}
-	else
-	{
-		_putchar(q	+	48);
-		return	(q);
-	}
+	putchar('\n');
 }
