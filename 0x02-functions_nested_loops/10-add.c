@@ -5,7 +5,7 @@
 /**
 * add - priints thesum of two digits
 * @a: First num
-* @b: Second number 
+* @b: Second number
 * Return: Thesum of a and b
 */
 
