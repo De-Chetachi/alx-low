@@ -14,6 +14,5 @@ int	add(int	a, int	b)
 	int	q;
 
 	q	=	a	+	b;
-	_putchar(q);
-	
+	_putchar(q	+	48);	
 }
