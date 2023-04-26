@@ -1,4 +1,5 @@
 #include	<stdio.h>
+#include	<unistd.h>
 #include	"main.h"
 
 /**
@@ -14,6 +15,6 @@ int	print_last_digit(int	p)
 
 	q	=	p	%	10;
 	result	=	q;
-	
-	return	(result);
+
+	return	(write(1,	q,	1));
 }
