@@ -7,12 +7,13 @@
 * Return: The last digit
 */
 
-int	int print_last_digit(int	p)
+int	print_last_digit(int	p)
 {
 	int	result;
+	int	q;
 
 	q	=	p	%	10;
 	result	=	q;
 	
-	return	(result)
+	return	(result);
 }
