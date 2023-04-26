@@ -10,26 +10,24 @@
 
 int	print_sign(int	n)
 {
-	int	result;
 
 	if	(n	>	0)
 	{
-		putchar(43);
-		result	=	1;
+		_putchar(43);
+		return	(1);
 	}
 
 	else
 	{
 		if	(n	<	0)
 		{
-			putchar('-');
-			result	=	-1;
+			_putchar(45);
+			return	(-1);
 		}
 		else
 		{
-			putchar('0');
-			result	=	0;
+			_putchar(48);
+			return	(0);
 		}
 	}
-	return	(result);
 }
