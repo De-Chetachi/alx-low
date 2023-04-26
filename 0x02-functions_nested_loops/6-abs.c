@@ -35,9 +35,8 @@ int	_abs(int	p)
 			{
 				temp	=	sqrt;
 				sqrt	=	((q	/	temp)	+	temp)	/	2;
-
-				result	=	sqrt;
 			}
+			result  =       sqrt;
 		}
 	}
 	return	(result);
