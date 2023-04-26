@@ -18,7 +18,7 @@ int	_abs(int	p)
 	}
 	else
 	{
-		result	=	((-1)*p)
+		result	=	((-1)*p);
 		
 	}
 	return	(result);
