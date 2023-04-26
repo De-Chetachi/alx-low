@@ -1,5 +1,6 @@
 #include	<stdio.h>
 #include	"main.h"
+#include <unistd.h>
 
 /**
 * _abs - priints the alphabets in small letters
