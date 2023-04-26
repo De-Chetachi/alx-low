@@ -34,17 +34,3 @@ void	jack_bauer(void)
 			}
 		}
 	}
-
-	q	=	p	%	10;
-
-	if	(q	<	0)
-	{
-		_putchar(-q	+	48);
-		return	(-q);
-	}
-	else
-	{
-		_putchar(q	+	48);
-		return	(q);
-	}
-}
