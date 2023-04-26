@@ -1,4 +1,5 @@
 #include	<stdio.h>
+#include	<stdlib.h>
 #include	<unistd.h>
 #include	"main.h"
 
@@ -8,7 +9,7 @@
 * Return: No
 */
 
-void	print_to_98(int n);
+void	print_to_98(int	n)
 {
 
 	for	(i	=	n;	i	<=	98;	i++)
