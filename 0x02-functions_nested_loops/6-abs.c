@@ -17,7 +17,7 @@ int	_abs(int	p)
 	}
 	else
 	{
-		if	(p	=	-1)
+		if	(p	==	-1)
 		{
 			result	=	1;
 		}
