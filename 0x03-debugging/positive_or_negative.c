@@ -2,6 +2,7 @@
 
 /**
 * positive_or_negative - checks if argument is positive or negative.
+* @i: Integer to be tested
 * Return: Null
 */
 
