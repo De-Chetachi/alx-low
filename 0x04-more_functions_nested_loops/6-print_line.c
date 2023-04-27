@@ -1,6 +1,6 @@
 #include	"main.h"
 /**
-* print_sign - priints the alphabets in small letters
+* print_sign - priints a line
 * @n: The integer to be considered
 * Return: Null
 */

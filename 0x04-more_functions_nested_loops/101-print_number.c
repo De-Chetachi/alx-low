@@ -1,12 +1,12 @@
 #include	"main.h"
 
 /**
-* print_diagonal - prints a diagonal line
+* print_number - prints an integer
 * @n: An integer
 * Return: Null
 */
 
-void	print_diagonal(int	n)
+void	print_number(int	n)
 {
 	if	(n	<=	0)
 	{
