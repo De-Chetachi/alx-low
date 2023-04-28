@@ -8,29 +8,20 @@
 
 void	print_number(int	n)
 {
-	if	(n	<=	0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		int	i;
-		int	j;
+	unsigned	int	k;
 
-		for	(i	=	0;	i	<	n;	i++)
-		{
-			for	(j	=	0;	j	<	n;	j++)
-			{
-				if	(j	==	i)
-				{
-					_putchar('\\');
-				}
-				else	if	(j	<	i)
-				{
-					_putchar(' ');
-				}
-			}
-			_putchar('\n');
-		}
+	k	=	n;
+
+	if	(n	<	0)
+	{
+		n	*=	-1;
+		k	=	n;
+		_putchar('-');
+	}
+	k	/=	n;
+	if	(k	!=	0)
+	{
+		print_number(k);
+		_putchar((unsigned int)	n	%	10	+	48);
 	}
 }
