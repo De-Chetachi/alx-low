@@ -19,4 +19,5 @@ char	*cap_string(char *s)
 			s[i]	=	toupper(s[i]);
 		}
 	}
+	return	(s);
 }
