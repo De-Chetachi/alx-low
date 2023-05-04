@@ -13,9 +13,10 @@ char	*cap_string(char *s)
 	int	i;
 
 	s[0]	=	toupper(s[0]);
+
 	for	(i = 1; s[i] != '\0'; i++)
 	{
-		if	(isspace(s[i - 1]) || ispunct(s[i-1]))
+		if	(isspace(s[i - 1]) || ispunct(s[i - 1]))
 		{
 			s[i]	=	toupper(s[i]);
 		}
