@@ -8,25 +8,22 @@
 
 char	*leet(char *s)
 {
-	char	s1[];
-	char	s2[];
+	char	str1[10]	=	"aAeEoOtTlL";
+	char	str2[10]	=	"4433007711";
 	int	i;
 	int	j;
 
-	str1	=	"aAeEoOtTlL";
-	str2	=	"4433007711";
-
 	for	(i = 0; s[i] != '\0'; i++)
 	{
-		for	(j != 0; j < 10; j++)
+		for	(j = 0; j < 10; j++)
 		{
-			if	(n[i] == str1[j])
+			if	(s[i] == str1[j])
 			{
-				n[i] == str2[j];
+				s[i] = str2[j];
 			}
 		}
 	}
-	return	(n);
+	return	(s);
 
 }
 
