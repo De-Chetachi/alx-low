@@ -14,7 +14,7 @@ char	*leet(char *s)
 	int	j;
 
 	str1	=	"aAeEoOtTlL";
-	str2	=	"43071";
+	str2	=	"4433007711";
 
 	for	(i = 0; s[i] != '\0'; i++)
 	{
