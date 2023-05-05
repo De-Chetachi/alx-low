@@ -16,7 +16,9 @@ char	*cap_string(char *s)
 
 	for	(i = 1; s[i] != '\0'; i++)
 	{
-		if	(isspace(s[i - 1]) || ispunct(s[i - 1]))
+		if	((s[i - 1] >= 32 && s[i - 1] <= 46) ||
+				s[i - 1] = '\n' ||s[i - 1] = '\t' ||
+				s[i - 1] = '?' ||)
 		{
 			s[i]	=	toupper(s[i]);
 		}
