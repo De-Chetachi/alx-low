@@ -11,30 +11,40 @@
  */
 char	*rot13(char *str)
 {
-	char	*encoded;
-	int	len,	i;
-	len	=	strlen(str);
-	encoded	=	malloc((len + 1)	*	sizeof(char));
-	
-	if	(encoded == NULL)
-		return NULL;
-	for	(i = 0; i < len; i++)
+	int	i;
+
+	for	(i = 0; str[i] != '\0'; i++)
 	{
-		int	pos,	rot13_pos;
-		char	rot13_char;
-		if (isalpha(str[i]))
+		char	pen;
+
+		if	(islower(str[i]))
 		{
-			pos	=	tolower(str[i]) - 'a';
-			rot13_pos	=	(pos + 13) % 26;
-			rot13_char	=	rot13_pos	+	'a'	+
-				(isupper(str[i]) ? 'A' - 'a' : 0);
-			encoded[i]	=	rot13_char;
+			if	(((str[i] - 'a') / 13 == 0) || ((str[i] - 'A') == 13))
+			{
+				pen	=	str[i]	+	13;
+			}
+			else	if	((str[i] - 'a') / 13 >= 1)
+			{
+				pen	=	str[i]	-	13;
+			}
+			str[i]	=	pen;
+		}
+		else	if	(isupper(str[i]))
+		{
+			if	(((str[i] - 'A') / 13 == 0) || ((str[i] - 'A') == 13))
+			{
+				pen	=	str[i]	+	13;
+			}
+			else	if	((str[i] - 'A') / 13 >= 1)
+			{
+				pen	=	str[i]	-	13;
+			}
+			str[i]	=	pen;
 		}
 		else
 		{
-			encoded[i] = str[i];
+			str[i]	=	str[i];
 		}
 	}
-	encoded[len] = '\0';
-	return encoded;
+	return	(str);
 }
