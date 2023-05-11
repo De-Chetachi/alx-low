@@ -20,12 +20,12 @@ int _sqrt_recursion(int n)
 
 int	sqroot(int q, int p)
 {
-	int	sqroot;
+	int	sqr;
 
-	sqroot	=	p	*	p;
-	if	(sqroot == q)
+	sqr	=	p	*	p;
+	if	(sqr == q)
 		return	(p);
-	if	(sqroot > q)
+	if	(sqr > q)
 		return	(-1);
 	return	(sqroot(q, p + 1));
 }
