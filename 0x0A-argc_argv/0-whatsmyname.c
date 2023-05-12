@@ -24,6 +24,7 @@ int _putchar(char c)
 int	main(int argc, char *argv[])
 {
 	int	i;
+	(void)argc;
 
 	for	(i = 0; argv[0][i] != 0; i++)
 	{
@@ -31,5 +32,5 @@ int	main(int argc, char *argv[])
 	}
 
 	_putchar('\n');
-	return	(argc - argc);
+	return	(0);
 }
