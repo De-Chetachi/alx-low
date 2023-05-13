@@ -53,17 +53,17 @@ int	main(int argc, char *argv[])
 	int	product;
 	int	a,	b;
 
-	a	=	_atoi(argv[1]);
-	b	=	_atoi(argv[2]);
 	if	(argc == 3)
 	{
+		a	=	_atoi(argv[1]);
+		b	=	_atoi(argv[2]);
 		product	=	a	*	b;
 		printf("%d\n", product);
-		return	(0);
 	}
 	else
 	{
 		printf("Error\n");
 		return	(1);
 	}
+	return	(0);
 }
