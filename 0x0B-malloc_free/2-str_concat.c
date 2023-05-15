@@ -60,7 +60,7 @@ char	*_strcat(char	*dest,	char	*src)
 
 char	*str_concat(char *s1, char *s2)
 {
-	int	i,	len;
+	unsigned	int	i,	len;
 	char	*str,	*ptr;
 
 	str	=	_strcat(s1, s2);
