@@ -52,7 +52,7 @@ char	*_strdup(char *str)
 
 	len	=	_strlen(str);
 
-	ptr	=	(char *)	malloc((len * sizeof(char)) + 1);
+	ptr	=	(char *)	malloc((len * sizeof(char)) + 2);
 	if	(ptr == NULL)
 	{
 		return	(NULL);
