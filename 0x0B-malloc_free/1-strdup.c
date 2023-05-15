@@ -52,7 +52,8 @@ char	*_strdup(char *str)
 	ptr	=	(char *)	malloc(len * sizeof(char));
 	if	(ptr == NULL)
 	{
-		_putchar("failed to allocate memory");
+		_putchar('failed to allocate memory');
+		return	(1);
 	}
 	for	(i = 0; i <= len; i++)
 	{
