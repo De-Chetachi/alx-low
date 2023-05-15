@@ -1,6 +1,19 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 /**
 * _strlen - calculates the length of a string
@@ -39,7 +52,7 @@ char	*_strdup(char *str)
 	ptr	=	(char *)	malloc(len * sizeof(char));
 	if	(ptr == NULL)
 	{
-		return	(NULL);
+		_putchar("failed to allocate memory");
 	}
 	for	(i = 0; i <= len; i++)
 	{
