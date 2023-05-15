@@ -47,13 +47,15 @@ char	*_strdup(char *str)
 	unsigned	int	i,	len;
 	char	*ptr;
 
+	if	(str == NULL)
+		return	(NULL);
+
 	len	=	_strlen(str);
 
-	ptr	=	(char *)	malloc(len * sizeof(char));
+	ptr	=	(char *)	malloc((len * sizeof(char)) + 1);
 	if	(ptr == NULL)
 	{
-		_putchar('failed to allocate memory');
-		return	(1);
+		return	(NULL);
 	}
 	for	(i = 0; i <= len; i++)
 	{
