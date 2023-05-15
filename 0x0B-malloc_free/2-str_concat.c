@@ -37,7 +37,7 @@ char	*_strcat(char	*dest,	char	*src)
 	if	(dest == NULL)
 		dest	=	"";
 	if	(src == NULL)
-		src 	=	"";
+		src	=	"";
 
 	for	(i = 0; dest[i] != '\0'; i++)
 		;
