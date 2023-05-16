@@ -24,10 +24,10 @@ char *argstostr(int ac, char **av)
 
 	for	(i = 0; i < ac; i++)
 	{
-		j	=	0;
-		while	(av[j])
+		while	(av[i][j])
 			j++;
 		sum	+=	j	+	1;
+		j	=	0;
 	}
 	ptr	=	(char *)	malloc((sum * sizeof(char)) + 1);
 
