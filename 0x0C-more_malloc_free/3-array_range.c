@@ -26,9 +26,10 @@ int	*array_range(int min, int max)
 
 	if	(ptr == NULL)
 		return	(NULL);
-	ptr[0]	=	value;
-	for	(j = 1; j < count; j++)
-		ptr[j]	=	value++;
-
+	for	(j = 0; j < count; j++)
+	{
+		ptr[j]	=	value;
+		value++;
+	}
 	return	(ptr);
 }
