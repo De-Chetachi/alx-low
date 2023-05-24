@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
-* void print_name - prints a name
+* print_name - prints a name
 * @name: Pointer to a string
 * @f: Pointer to a function
 * Return: Void
