@@ -10,23 +10,22 @@
 int	main(int argc, char *argv[])
 {
 	int	a, b, result;
-	int	(*prt)(int, int);
+	char	*s;
 
 	a	=	atoi(argv[1]);
 	b	=	atoi(argv[3]);
+	s	=	argv[2];
 	if	(argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	prt	=	get_op_func(argv[2]);
-	if	(!prt)
+	if	(!get_op_func(s))
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	result  =       (*get_op_func(argv[2]))(a, b);
+	result  =       (*get_op_func(s))(a, b);
 	printf("%d\n", result);
 
 	return	(0);
