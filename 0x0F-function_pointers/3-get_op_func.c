@@ -4,6 +4,7 @@
 * get_op_func -  selects the correct function to
 *  perform the operation asked by the user
 *  @s: Pointer to the operator
+*  Return: Pointer
 */
 
 int	(*get_op_func(char *s))(int, int)
