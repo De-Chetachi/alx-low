@@ -12,10 +12,10 @@ main:
 	mov eax, 4
 	;call the kernal
 	int 0x80
-	
+
 	;systen call (sys_exit)
-	mov eax, 1 
-	
+	mov eax, 1
+
 	;call the kernal
 	int 0x080
 
@@ -28,5 +28,3 @@ section .data
 
 	;define the length of the message to be printed
 	length equ $ -print_msg
-
-	
