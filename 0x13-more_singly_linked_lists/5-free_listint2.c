@@ -12,6 +12,10 @@ void	free_listint2(listint_t **head)
 
 	node_temp	=	*head;
 
+	/*stop if head is null*/
+	if	(head == NULL)
+		return;
+
 	/*free each node while traversing through it*/
 	while	(*head != NULL)
 	{
