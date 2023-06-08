@@ -7,9 +7,8 @@
 
 unsigned	int	binary_to_uint(const char *b)
 {
-	unsigned	int	k, decint;
-
-	decint = k = 0;
+	unsigned	int	k	=	0;
+	unsigned	int	decint	=	0;
 
 	/*return 0 if b is a null string*/
 	if	(b == NULL)
@@ -23,6 +22,7 @@ unsigned	int	binary_to_uint(const char *b)
 			return	(0);
 		/*onvert to decimal*/
 		decint	= 2 * decint + (b[k] - '0');
+		k++;
 	}
 	return	(decint);
 }
