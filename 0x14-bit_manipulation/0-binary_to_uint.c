@@ -8,6 +8,7 @@
 unsigned	int	binary_to_uint(const char *b)
 {
 	unsigned	int	k, decint;
+
 	decint = k = 0;
 
 	/*return 0 if b is a null string*/
@@ -15,7 +16,7 @@ unsigned	int	binary_to_uint(const char *b)
 		return (0);
 
 	/*loop through the string*/
-	while	(b[k] != '0')
+	while	(b[k] != '\0')
 	{
 		/*return 0 if any of the elements of the string is non-binary*/
 		if (b[k] != '0' && b[k] != '1')
