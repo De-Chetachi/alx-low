@@ -16,16 +16,16 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	* declare an unsigned int varuable to store the result
 	*/
 	bool a, b;
-	unsigned int iterate, result;
+	unsigned int	result;
 
 	result = 0;
-	for (iterate = 0; iterate < 32; iterate++)
+	while (n != 0 || m != 0)
 	{
 		a = false;
 		b = false;
-		if (n & (1 << iterate))
+		if (n & 1)
 			a = true;
-		if (m & (1 << iterate))
+		if (m & 1)
 			b = true;
 		/**
 		* increment result by 1 if the values
@@ -33,16 +33,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		* that is if a is false and b is true increment result
 		* vis vasa
 		*/
-		if (a == false)
-		{
-			if (b == true)
-				result++;
-		}
-		else
-		{
-			if (b == false)
-				result++;
-		}
+		if (a != b)
+			result++;
+
+		n = n >> 1;
+		m = m >> 1;
 	}
 	return (result);
 
