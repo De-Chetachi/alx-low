@@ -26,6 +26,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	* store the new result in *n
 	* return 1
 	*/
-	*n = *n & (~(f << index));
+	*n = *n & (~(f_shift << index));
 	return (1);
 }
