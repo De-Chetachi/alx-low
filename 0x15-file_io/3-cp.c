@@ -68,7 +68,7 @@ int main(int ac, char **av)
 	do {
 		if (rdfrm == -1 || strno == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			free(buff);
 			exit(98);
 		}
