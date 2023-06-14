@@ -25,9 +25,9 @@ char *_buffer(char *readfile)
 /**
  * _close - Closes the file with the spec file descriptors.
  * @fdes: The file descriptor of file  to be closed.
- * Return: 0
+ * Return: Void
  */
-int _close(int fdes)
+void _close(int fdes)
 {
 	int cls;
 
@@ -35,10 +35,9 @@ int _close(int fdes)
 
 	if (cls == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fdes %d\n", fdes);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdes);
 		exit(100);
 	}
-	return (0);
 }
 
 
