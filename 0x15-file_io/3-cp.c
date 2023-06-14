@@ -82,5 +82,9 @@ int main(int ac, char **av)
 		strno = read(rdfrm, buff, 1024);
 		wrto = open(av[2], O_WRONLY | O_APPEND);
 	} while (strno > 0);
+
+	free(buff);
+	_close(rdfrm);
+	_close(wrto);
 	return (0);
 }
