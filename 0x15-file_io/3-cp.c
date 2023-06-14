@@ -73,7 +73,7 @@ int main(int ac, char **av)
 			exit(98);
 		}
 		wrt = write(wrto, buff, strno);
-		if (wrt == -1 || wrt == -1)
+		if (wrto == -1 || wrt == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
 			free(buff);
