@@ -23,7 +23,7 @@ char *_buffer(char *readfile)
 }
 
 /**
- * close_file - Closes the file with the spec file descriptors.
+ * _close - Closes the file with the spec file descriptors.
  * @fdes: The file descriptor of file  to be closed.
  * Return: Void
  */
@@ -42,48 +42,45 @@ void _close(int fdes)
 
 
 /**
- * main - copies content from one file to anoyher
- * @ac: Number of command line args
- * @av: Commandline args
- * Return: Always 0.
- */
+* main - copies content from one file to anoyher
+* @ac: Number of command line args
+* @av: Commandline args
+* Return: Always 0.
+*/
 int main(int ac, char **av)
 {
-    int strno;
-    int rdfrm;
-    int wrto;
-    int wrt;
-    char *buff;
+	int strno;
+	int rdfrm;
+	int wrto;
+	int wrt;
+	char *buff;
 
-    if (ac != 3)
-    {
-        dprintf(2, "Usage: %s %s %s\n", av[0], av[1], av[2]);
-        exit(97);
-    }
+	if (ac != 3)
+	{
+		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	buff = _buffer(av[2]);
+	rdfrm = open(av[1], O_RDONLY);
+	strno = read(rdfrm, buff, 1024);
+	wrto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-    buff = _buffer(av[2]);
-    rdfrm = open(av[1], O_RDONLY);
-    strno = read(rdfrm, buff, 1024);
-    wrto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-    do
-    {
-	    if (rdfrm == -1 || strno == -1)
-	    {
-		    dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
-		    free(buff);
-		    exit(98);
-	    }
-	    
-	    wrt = write(wrto, buff, strno);
-	    if (wrt == -1 || wrt == -1)
-	    {
-		     dprintf(STDERR_FILENO,"Error: Can't write to file %s\n", av[2]);
-		     free(buff);
-		     exit(99);
-	    }
-	    strno = read(rdfrm, buff, 1024);
-	    wrto = open(av[2], O_WRONLY | O_APPEND);
-    }while(strno > 0);
-    return (0);
+	do {
+		if (rdfrm == -1 || strno == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			free(buff);
+			exit(98);
+		}
+		wrt = write(wrto, buff, strno);
+		if (wrt == -1 || wrt == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+			free(buff);
+			exit(99);
+		}
+		strno = read(rdfrm, buff, 1024);
+		wrto = open(av[2], O_WRONLY | O_APPEND);
+	} while (strno > 0);
+	return (0);
 }
