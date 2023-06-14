@@ -68,14 +68,14 @@ int main(int ac, char **av)
 	do {
 		if (rdfrm == -1 || strno == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
 			free(buff);
 			exit(98);
 		}
 		wrt = write(wrto, buff, strno);
 		if (wrto == -1 || wrt == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			free(buff);
 			exit(99);
 		}
