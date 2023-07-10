@@ -10,17 +10,13 @@ char *_buffer(char *readfile)
 {
 	char *buff;
 
-
 	buff = malloc(sizeof(char) * 1024);
-
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", readfile);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", readfile);
 		exit(99);
 	}
-
 
 	return (buff);
 }
@@ -34,9 +30,7 @@ void _close(int fdes)
 {
 	int cls;
 
-
 	cls = close(fdes);
-
 
 	if (cls == -1)
 	{
@@ -60,7 +54,6 @@ int main(int ac, char **av)
 	int wrt;
 	char *buff;
 
-
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
@@ -70,7 +63,6 @@ int main(int ac, char **av)
 	rdfrm = open(av[1], O_RDONLY);
 	strno = read(rdfrm, buff, 1024);
 	wrto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 
 	do {
 		if (rdfrm == -1 || strno == -1)
@@ -89,7 +81,6 @@ int main(int ac, char **av)
 		strno = read(rdfrm, buff, 1024);
 		wrto = open(av[2], O_WRONLY | O_APPEND);
 	} while (strno > 0);
-
 
 	free(buff);
 	_close(rdfrm);
