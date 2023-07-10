@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * * append_text_to_file - appends text at the end of a file.
- * * @filename: Name of the file to be created
- * * @text_content: A NULL terminated string t be appended in the file
- * * Return: 1 or -1
- * */
+* append_text_to_file - appends text at the end of a file.
+* @filename: Name of the file to be created
+* @text_content: A NULL terminated string t be appended in the file
+* Return: 1 or -1
+*/
 
 int append_text_to_file(const char *filename, char *text_content)
 {

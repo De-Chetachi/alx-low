@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * * _buffer - create a buffer of 1024 bits
- * * @readfile: File whose buffers contents is to be stored in
- * * Return: Pointer to the created beffer
- * */
+* _buffer - create a buffer of 1024 bits
+* @readfile: File whose buffers contents is to be stored in
+* Return: Pointer to the created beffer
+*/
 char *_buffer(char *readfile)
 {
 	char *buff;
@@ -47,11 +47,11 @@ void _close(int fdes)
 
 
 /**
- * * main - copies content from one file to anoyher
- * * @ac: Number of command line args
- * * @av: Commandline args
- * * Return: Always 0.
- * */
+* main - copies content from one file to anoyher
+* @ac: Number of command line args
+* @av: Commandline args
+* Return: Always 0.
+*/
 int main(int ac, char **av)
 {
 	int strno;

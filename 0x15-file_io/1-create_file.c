@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * * create_file - creates a file.
- * * @filename: Name of the file to be created
- * * @text_content: A NULL terminated string t be written in the file
- * * Return: 1 or -1
- * */
+* create_file - creates a file.
+* @filename: Name of the file to be created
+* @text_content: A NULL terminated string t be written in the file
+* Return: 1 or -1
+*/
 
 int create_file(const char *filename, char *text_content)
 {
