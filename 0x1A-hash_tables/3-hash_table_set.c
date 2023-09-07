@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || value == NULL || key == NULL)
 		return (0);
-	if (strcmp(key, "") == 0)
+	if (strlen(key) == 0)
 		return (0);
 	size = ht->size;
 	index = key_index((unsigned char *)key, size);
@@ -66,7 +66,7 @@ hash_node_t *node_add_begin(hash_node_t **head, unsigned long int index,
 				free(new_node->value);
 				free(new_node->key);
 				free(new_node);
-				return (*head);
+				return (head[index]);
 			}
 			temp = temp->next;
 		}
