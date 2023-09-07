@@ -63,8 +63,8 @@ hash_node_t *node_add_begin(hash_node_t **head, unsigned long int index,
 			{
 				free(temp->value);
 				temp->value = strdup(value);
-				free(new_node->value);
 				free(new_node->key);
+				free(new_node->value);
 				free(new_node);
 				return (head[index]);
 			}
