@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || value == NULL || key == NULL)
 		return (0);
 	if (strcmp(key, "") == 0)
-		 return (0);
+		return (0);
 	size = ht->size;
 	index = key_index((unsigned char *)key, size);
 	head = node_add_begin(ht->array, index, (char *)key, (char *)value);
@@ -30,12 +30,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 /**
 * node_add_begin - adds a new node to the chain
 * @head: pointer to the head of the chain
+* @index: index
 * @key: the key
 * @value: the value
 * Return: pointer to the modified head
 */
 
-hash_node_t *node_add_begin(hash_node_t **head, unsigned long int index, char *key, char *value)
+hash_node_t *node_add_begin(hash_node_t **head, unsigned long int index,
+		char *key, char *value)
 {
 	hash_node_t *new_node, *temp;
 
