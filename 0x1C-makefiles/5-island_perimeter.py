@@ -13,25 +13,18 @@ def island_perimeter(grid):
         for b in range(list_):
             if grid[a][b] == 1:
                 param = param + 4
-                try:
+                if b > 0:
                     if grid[a][b - 1] == 1:
                         param -= 1
-                except IndexError:
-                    pass
-                try:
+                if b < list_ - 1:
                     if grid[a][b + 1] == 1:
                         param -= 1
-                except IndexError:
-                    pass
-                try:
+                if a > 0:
                     if grid[a - 1][b] == 1:
                         param -= 1
-                except IndexError:
-                    pass
-                try:
+
+                if a < mat - 1:
                     if grid[a + 1][b] == 1:
                         param -= 1
-                except IndexError:
-                    pass
 
     return (param)
