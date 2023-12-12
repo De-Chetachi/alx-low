@@ -42,12 +42,13 @@ int binary_search(int *array, size_t size, int value)
 * print_array - prints a search array
 * @array: pointer to first element of array
 * @size: size of array
-* Return 0
+* Return: 0
 */
 
 int print_array(int *array, size_t size)
 {
 	size_t i;
+
 	printf("Searching in array: ");
 	for (i = 0; i < size; i++)
 	{
