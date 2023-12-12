@@ -11,7 +11,6 @@
 int binary_search(int *array, size_t size, int value)
 {
 	int temp = size;
-	size_t mid;
 
 	if (!array)
 		return (-1);
@@ -24,19 +23,17 @@ int binary_search(int *array, size_t size, int value)
 	}
 	else if (size > 1)
 	{
-		mid = size / 2;
-		if (!(size % 2))
-			mid -= 1;
 		print_array(array, size);
-		if (value == array[mid])
-			return (mid);
-		if (value < array[mid])
+		size /= 2;
+		if (value == array[size])
+			return (size);
+		if (value < array[size])
 		{
 			/*(array + size) = NULL;*/
-			return (binary_search(array, mid, value));
+			return (binary_search(array, size, value));
 		}
 		else
-			return (binary_search(array + mid + 1, temp - mid - 1, value));
+			return (binary_search(array + size, temp - size, value));
 	}
 	return (-1);
 }
