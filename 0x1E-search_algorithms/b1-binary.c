@@ -10,36 +10,34 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
+	int temp = size;
 	size_t mid;
-	size_t chunk = 0;
 
 	if (!array)
 		return (-1);
-	while (size > 1)
+	/*handle an array with single element*/
+	if (size == 1)
 	{
-		print_array(array, size);
+		printf("Searching in array: %d\n", array[0]);
+		if (value == array[0])
+			return (0);
+	}
+	else if (size > 1)
+	{
 		mid = size / 2;
 		if (!(size % 2))
 			mid -= 1;
-		if (array[mid] == value)
-			return (mid + chunk);
-		if (array[mid] < value)
+		print_array(array, size);
+		if (value == array[mid])
+			return (mid);
+		if (value < array[mid])
 		{
-			chunk = chunk + mid + 1;
-			array = array + mid + 1;
-			size = size - mid - 1;
-			continue;
+			/*(array + size) = NULL;*/
+			return (binary_search(array, mid, value));
 		}
-		if (array[mid] > value)
-		{
-			size = mid;
-			continue;
-		}
+		else
+			return (binary_search(array + mid + 1, temp - mid - 1, value));
 	}
-	/*handle an array with single element*/
-	print_array(array, size);
-	if (array[0] == value)
-		return (chunk);
 	return (-1);
 }
 
